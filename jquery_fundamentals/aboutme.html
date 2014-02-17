@@ -1,0 +1,54 @@
+<style>
+.listitem {
+	color: red;
+}
+</style>
+
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8"/>
+   <title>About Me</title>
+ </head>
+ <body>
+   <h1>About Me</h1>
+
+   <ul>
+     <li>Nickname: <span id="nickname"></span>
+     <li>Favorites:  <span id="favorites"></span>
+     <li>Hometown: <span id="hometown"></span>
+    </ul>
+
+
+<img></img>
+
+    <script>
+    var body = document.getElementsByTagName('body');
+	body[0].style.fontFamily = "Arial, sans-serif"
+
+	var span = document.getElementsByTagName('span');
+	var spanTexts = ["sep", "basketball", "toronto"]
+	for (var i=0; i<span.length; i++){
+		span[i].textContent = spanTexts[i]
+	}
+
+	var listStyleArray = document.getElementsByTagName('li')
+
+	var stylingFunction = function(array, attributeName, attributeValue) {
+		for (var i=0; i<array.length; i++){
+			array[i].setAttribute(attributeName , attributeValue);
+		}
+	}
+
+	stylingFunction(listStyleArray, "class", "listitem")
+
+	var newImg = document.createElement('img')
+	newImg.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAlySsM8OtLfg7JdNF2Iv8XjRmr6ohMq_SW_Fqgep-dz0qeQcN7A"
+
+	var pageNode = document.getElementsByTagName('body')[0]
+	pageNode.appendChild(newImg)
+
+    </script>
+  </body>
+ </html>
+

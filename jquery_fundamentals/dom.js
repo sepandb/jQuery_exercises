@@ -10,6 +10,12 @@
 // Find the Google search button and store it in a variable.
 // Modify the text of the button so that it says "Yahooo!" instead.
 
+var img = document.getElementById('hplogo')
+img.style.background = "url('https://mozorg.cdn.mozilla.net/media/img/firefox/new/header-firefox.png?2013-06')"
+
+var button = document.getElementById('gbqfsa')
+button.textContent = "Yahoo!"
+
 // EXERCISE: About Me
 
 // Cuz every webpage needs an "About" section.
@@ -38,6 +44,9 @@
 // Replace each of the spans (nickname, favorites, hometown) with your own information.
 // Iterate through each li and change the class to "listitem". Add a style tag that sets a rule for "listitem" to make the color red.
 // Create a new img element and set its src attribute to a picture of you. Append that element to the page.
+
+var body = document.getElementsByTagName('body')
+body.style.fontFamily = "Arial, sans-serif"
 
 // EXERCISE: The Book List
 
