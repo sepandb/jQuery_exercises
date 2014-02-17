@@ -1,0 +1,56 @@
+<h1>My Book List</h1>
+
+
+<body>
+</body>
+
+
+<script>
+	var books = [
+		{
+			'title': "MakkaBook",
+			'author': "Michael Jordan",
+			'alreadyRead': true
+		},
+		{
+			'title': "Elegant Universe",
+			'author': "Brian Green",
+			'alreadyRead': false
+		},
+		{
+			'title': "Hunger Games",
+			'author': "Lebron James",
+			'alreadyRead': true
+		}
+ ]
+
+ 	var display = function(books) {
+
+ 		var bodyNode = document.getElementsByTagName('body')[0];
+ 		var unorderedList = document.createElement('ul')
+ 		for (i=0; i<books.length; i++) {
+ 			book = books[i]
+ 			var pNode = document.createElement('li')
+ 			pNode.innerHTML =  "Title: " + book.title + "  Author: " + book.author
+ 			unorderedList.appendChild(pNode)
+
+ 		}
+ 		 bodyNode.appendChild(unorderedList)
+
+ 	}
+
+ 	display(books)
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
