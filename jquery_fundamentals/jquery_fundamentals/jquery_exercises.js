@@ -92,25 +92,66 @@ $(document).ready(function(){
 // Select the second option in the selectbox by script
 // Hint: you will have to select the option and can use .eq and .attr
 
+<script>
+	$(document).ready(function(){
+		var selected = $('#target select option')
+		selected.eq(1).attr('selected', 'selected')
+	})
+</script>
+
 // EXERCISE: Change Size
 
 // Make "#target" double size
 // Hint: you can use .css, .width and .height
+<script>
+	$(document).ready(function(){
+		var target = $('#target')
+		target.css({
+			'width' : 2*target.width(),
+			'height' : 2*target.height()
+		})
+	});
+</script>
 
 // EXERCISE: Empty Elements
 // Hint: you can use .empty
-
 // Remove all children and text of "#target"
+
+
+<script>
+	$(document).ready(function(){
+		$('#target').empty();
+	})
+</script>
+
 
 // EXERCISE: Delay
 
 // Show Alert with 1 second delay (Use "setTimeout")
 // Hint: you can use .setTimeout and alert
 
+<script>
+	$(document).ready(function(){
+		var delay = function(){
+			alert("We got a situation.")
+		}
+
+		setTimeout(delay, 1000);
+	})
+</script>
+
+
 // EXERCISE: Count
 
 // Show the number of children in an alert
 // Hint: you can use .children, .length and alert or you could use .find, .size and alert. the alert should show 5
+
+<script>
+	$(document).ready(function(){
+		var children = $('#target .child');
+		alert("There are " + children.length + " children");
+	})
+</script>
 
 // EXERCISE: Animate
 
