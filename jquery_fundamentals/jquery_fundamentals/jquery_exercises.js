@@ -2,38 +2,90 @@
 
 // EXERCISE: Change Background
 
-// Change the background color of '#target' by script. 
+// Change the background color of '#target' by script.
 // Hint: you can use .css
+
+<script>
+$(document).ready(function(){
+	$("#target").css({
+	'background-color': 'red'
+	})
+})
+</script>
+
 
 // EXERCISE: Change Parent
 
 // Change the text in the span, a child of "#target"
 // Hint: you can use .text
 
+<script>
+$(document).ready(function() {
+	$('#target span').text('this is some different text')
+});
+</script>
+
 // EXERCISE: Create Clone
 
 // Create a clone of the span in "#target" and position it under the origin.
 // Hint: you can use .clone and .insertAfter
+
+<script>
+$(document).ready(function(){
+	var newTarget = $('#target span').clone()
+	$(newTarget).insertAfter('#target')
+})
+</script>
 
 // EXERCISE: Use Filter
 
 // Change background color of the second ".target"
 // Hint: you can use .eq and .css
 
+<script>
+	$(document).ready(function(){
+		$('.target').eq(1).css({'background-color': 'green'})
+	})
+</script>
+
 // EXERCISE: Disable Buttons
 
 // Disable the button
 // Hint: you will have to select the button and can use .attr
+
+<script>
+	$(document).ready(function(){
+		var button = $('button')
+		button.attr('disabled', 'disabled')
+	})
+</script>
 
 // EXERCISE: Uncheck CheckBoxes
 
 // Uncheck all checkboxes using jQuery
 // Hint: you will have to select the input and can use .removeAttr
 
+<script>
+	$(document).ready(function(){
+		var checkbox = $('[type=checkbox')
+		checkbox.attr('checked', false)
+
+	})
+</script>
+
 // EXERCISE: Change Parent
 
 // Move "#child" from "#parent1" to "#parent2"
 // Hint: you can use .appendTo
+
+<script>
+	$(document).ready(function(){
+		var child = $('#child')
+		child.detach().appendTo('#parent2')
+	})
+</script>
+
+
 
 // EXERCISE: Select A Option in A Select Box
 
