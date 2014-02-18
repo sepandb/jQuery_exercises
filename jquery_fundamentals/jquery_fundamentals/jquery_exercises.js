@@ -158,19 +158,58 @@ $(document).ready(function(){
 // Make "#target" double size with animation
 // Hint: you can use .animate, .width, and .height
 
+<script>
+	$(document).ready(function(){
+		var target = $('#target');
+		target.animate({
+			'width' : 2*target.width(),
+			'height': 2*target.height()
+		});
+	})
+</script>
+
+
 // EXERCISE: Alternate Color
 
 // Make the list-box alternating. (Make odd options a different color)
 // Hint: you can select the option and use .filter and .css
+
+<script>
+	$(document).ready(function(){
+		var options = $('#target select option');
+
+		options.filter(':odd').css({
+			'color': 'red'
+		});
+	})
+</script>
 
 // EXERCISE: All But One
 
 // Remove all children of "#target" but h2
 // Hint: you can use .children, .not and .remove
 
+<script>
+	$(document).ready(function(){
+		var baches = $('#target')
+		baches.children().not('h2').remove()
+	})
+</script>
+
+
+
+
 // EXERCISE: Without Children
 
 // Remove all 'div' whitch has no child elements.
 // Hint: you can use .not and .remove. Look closely at what options you can pass .not
+<script>
+$(document).ready(function(){
+	var targets = $('.target');
+	// THIS WORKS TOO targets.not(":empty").remove();
+	targets.remove(':empty');
+})
+</script
+
 
 
