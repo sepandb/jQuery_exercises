@@ -24,7 +24,7 @@ $(document).ready(function(){
 		checkThree($('#31').html(), $('#32').html(), $('#33').html());
 		checkThree($('#11').html(), $('#21').html(), $('#31').html());
 		checkThree($('#12').html(), $('#22').html(), $('#32').html());
-		checkThree($('#31').html(), $('#32').html(), $('#33').html());
+		checkThree($('#13').html(), $('#23').html(), $('#33').html());
 		checkThree($('#11').html(), $('#22').html(), $('#33').html());
 		checkThree($('#31').html(), $('#22').html(), $('#13').html());
 	}
